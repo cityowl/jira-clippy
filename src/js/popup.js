@@ -23,7 +23,7 @@ chrome.tabs.query({
   title = title.join(' - ');
 
   // Format: XXX-999 - Description
-  var split = title.match(/^\[(.+)\](.+)/);
+  var split = title.match(/^\[([^.?!\]]+)\](.+)/);
   title = split[1] + ' -' + split[2];
 
   var combine = title + '\n' + url;
